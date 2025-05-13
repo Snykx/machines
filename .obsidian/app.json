@@ -1,0 +1,10 @@
+{
+  "promptDelete": false,
+  "readableLineLength": false,
+  "showLineNumber": false,
+  "showUnsupportedFiles": false,
+  "attachmentFolderPath": "img",
+  "userIgnoreFilters": [
+    "img/"
+  ]
+}
