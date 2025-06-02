@@ -5,10 +5,8 @@
 > 📁 Estructura actual:
 >> HTB/
 └── Very Easy/
-├── Appointment.md
-├── Fawn.md
+├── machine.md*
 ├── ...
-└── img/
 
 
 
