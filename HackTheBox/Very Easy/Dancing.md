@@ -1,4 +1,3 @@
-
 -----------------
 - Tags: #protocols #SMB #Reconnaisance #anonymous 
 ------------------------
@@ -13,11 +12,13 @@ En las tareas que nos encontramos, nos piden:
 
 ![[11d553d71208ec5d829c3e1d23cd1588.png]]
 
-Para encontrar estas soluciones, hemos hecho un #nmap #-sV #ip
+Iniciamos un escaneo básico para identificar puertos abiertos:
 
 ![[30be22490b48a3945fcbbc5cf0dffa9a.png]]
 
-Viendo que tarda mucho tiempo, haremos un scan más rápido como:
+Esto nos revela que el puerto `445` está abierto y que el servicio asociado es `microsoft-ds`, típico de SMB.
+
+En caso de que este escaneo sea muy lento, usamos una versión rápida:
 
 ```bash
 nmap -p- --min-rate 5000 -T4 -n -Pn "IP"
@@ -27,11 +28,11 @@ nmap -p- --min-rate 5000 -T4 -n -Pn "IP"
 
 ![[ef05583e40a0d17f7e0261ea027bdc75 1.png]]
 
-Aquí vemos, que ha tardado 36 segundos y que nos encontramos con unos cuantos puertos abiertos con sus servicios.
+Esto nos revela múltiples puertos abiertos. Sin embargo, el foco es el puerto `445`, donde corre SMB.
 
-El puerto que opera con el protocolo SMB es el 445, y el servicio es el "microsoft-ds"
+## 🔍 Enumeración de recursos SMB
 
-Sabiendo el protocolo que es, entraremos al servicio con:
+Listamos los recursos compartidos con `smbclient`:
 
 ```bash
 smbclient -L //10.129.129.87
@@ -39,13 +40,17 @@ smbclient -L //10.129.129.87
 
 ![[d11e8e1028d349ca55e109a93b255ef0.png]]
 
-Podemos entrar como "smbclient -L //IP"  y/o añadir "-N" al final. Esto servirá para que no nos pida la contraseña, cuando ya sabemos que (por ejemplo) no tiene.
+Si queremos evitar que nos pida contraseña (cuando ya sabemos que no la hay), usamos `-N`:
+
+```bash
+smbclient -L //10.129.129.87 -N
+```
 
 En las preguntas de la máquina ya nos está dando una pista que es:
 
 ![[0d7f9d1fd64c3aaf80ff0dd44cd5c07d.png]]
 
-Entonces, nos conectaremos al recurso de WorkShares:
+Uno de los recursos es `WorkShares`, que aceptará conexión sin contraseña:
 
 ```bash
 smbclient //10.129.129.87/WorkShares -N
@@ -53,9 +58,25 @@ smbclient //10.129.129.87/WorkShares -N
 
 ![[41debf9086274230bdee1794409f6b91.png]]
 
-Como vemos en la captura, hacemos un ls para buscar archivos, y nos encontraremos 2 carpetas.
+## 📂 Búsqueda de la flag en el recurso compartido
 
-En una de las carpetas, encontramos el flag.txt, lo descargamos con "get" y desde nuestro directorio, lo abriremos para ver nuestra flag:
+Una vez dentro de `WorkShares`, listamos el contenido:
+
+Accedemos a la carpeta `James.P`:
+
+Encontramos un archivo `flag.txt`, lo descargamos con:
+
+Finalmente, en nuestro sistema local, lo abrimos:
 
 ![[08bcd1d1cb26c684b7d18b529c974a51.png]]
 
+📌 **Flag encontrada:**
+
+## ✅ Conclusión final
+
+- La máquina expone un recurso compartido SMB accesible sin autenticación.
+    
+- Desde ese recurso, navegamos hasta un archivo sensible (`flag.txt`) y lo descargamos.
+    
+
+🔐 **Lección aprendida:** Nunca se deben compartir recursos en red sin autenticar. Es un error habitual en entornos mal configurados.
