@@ -1,6 +1,3 @@
-----
-
-----
 ![[cc2f35f31baac4bb3bc5e0f7ad6a9df5.png]]
 
 🧩 **Dificultad**: Easy (Linux)  
