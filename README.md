@@ -12,7 +12,7 @@
 
 ## 📌 Máquinas documentadas
 
-- ✅ [Appointment](HTB/Very%20Easy/Appointment.md)
+- ✅ [Appointment](Very%20Easy/Appointment.md)
 - ✅ [Archetype](HTB/Very%20Easy/Archetype.md)
 - ✅ [Crocodile](HTB/Very%20Easy/Crocodile.md)
 - ✅ [Fawn](HTB/Very%20Easy/Fawn.md)
