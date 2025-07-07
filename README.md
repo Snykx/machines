@@ -13,17 +13,17 @@
 ## 📌 Máquinas documentadas
 
 - ✅ [Appointment](Very%20Easy/Appointment.md)
-- ✅ [Archetype](HTB/Very%20Easy/Archetype.md)
-- ✅ [Crocodile](HTB/Very%20Easy/Crocodile.md)
-- ✅ [Fawn](HTB/Very%20Easy/Fawn.md)
-- ✅ [Oopsie](HTB/Very%20Easy/Oopsie.md)
-- ✅ [Responder](HTB/Very%20Easy/Responder.md)
-- ✅ [Sequel](HTB/Very%20Easy/Sequel.md)
-- ✅ [Vaccine](HTB/Very%20Easy/Vaccine.md)
-- ✅ [Three](HTB/Very%20Easy/Three.md)
-- ✅ [Meox](HTB/Very%20Easy/Meox.md)
-- ✅ [Dancing](HTB/Very%20Easy/Dancing.md)
-- ✅ [Redeemer](HTB/Very%20Easy/Redeemer.md)
+- ✅ [Archetype](Very%20Easy/Archetype.md)
+- ✅ [Crocodile](Very%20Easy/Crocodile.md)
+- ✅ [Fawn](Very%20Easy/Fawn.md)
+- ✅ [Oopsie](Very%20Easy/Oopsie.md)
+- ✅ [Responder](Very%20Easy/Responder.md)
+- ✅ [Sequel](Very%20Easy/Sequel.md)
+- ✅ [Vaccine](Very%20Easy/Vaccine.md)
+- ✅ [Three](Very%20Easy/Three.md)
+- ✅ [Meox](Very%20Easy/Meox.md)
+- ✅ [Dancing](Very%20Easy/Dancing.md)
+- ✅ [Redeemer](Very%20Easy/Redeemer.md)
 
 ## 📂 Herramientas utilizadas
 
