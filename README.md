@@ -1,6 +1,6 @@
 # 🧠 HackTheBox Writeups - by Snykx
 
-¡Bienvenido/a! Este repositorio contiene mis writeups personales de máquinas "Very Easy" de HackTheBox, redactados en Markdown y exportados desde Obsidian.
+¡Bienvenido/a! Este repositorio contiene mis writeups personales de máquinas retiradas "Very Easy" y "Easy" de HackTheBox, redactados en Markdown y exportados desde Obsidian.
 
 > 📁 Estructura actual:
 >> 
