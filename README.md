@@ -3,7 +3,7 @@
 ¡Bienvenido/a! Este repositorio contiene mis writeups personales de máquinas "Very Easy" de HackTheBox, redactados en Markdown y exportados desde Obsidian.
 
 > 📁 Estructura actual:
->> HTB/
+>> 
 └── Very Easy/
 ├── machine.md*
 ├── ...
