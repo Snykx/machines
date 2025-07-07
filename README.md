@@ -1,13 +1,12 @@
 # 🧠 HackTheBox Writeups - by Snykx
 
-¡Bienvenido/a! Este repositorio contiene mis writeups personales de máquinas retiradas "Very Easy" y "Easy" de HackTheBox, redactados en Markdown y exportados desde Obsidian.
+¡Bienvenido/a! Este repositorio contiene mis writeups personales de máquinas retiradas "Very Easy" y "Easy" de HackTheBox, redactados desde Obsidian.
 
 > 📁 Estructura actual:
 >> 
 └── Very Easy/
 ├── machine.md*
 ├── ...
-
 
 
 ## 📌 Máquinas documentadas:
@@ -56,13 +55,14 @@
 ---
 ## 📂 Herramientas utilizadas
 
-- Obsidian para redacción y organización
-- Git + GitHub para control de versiones
-- Script automático para organizar y subir todo fácilmente
+- 🧠 Obsidian: para redactar y visualizar los writeups.
+- 💻 Parrot OS / Linux: Entornos principales (desde VBox) donde ejecuto las máquinas de Hack The Box y realizo los análisis de vulnerabilidades.
+- 🧰 GitHub para visionar y almacenar el contenido y compartir mis progresos de HTB.
+- ⚙️ Script automático personalizado para organizar y subir todo fácilmente al repo.
 
 ---
 
 **¡Espero que te sirva o te inspire!**  
 🧠 💻 🐚  
 
-**Seguiré subiendo proximamente.
+**Seguiré subiendo proximamente.*
